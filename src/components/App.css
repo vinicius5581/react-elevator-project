@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  background-color: lightblue;
+  padding: 50px;
+}
+
+.ElevatorControlPanel {
+  background-color: palevioletred;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonOn {
+  background-color: red;
+}
+
+
