@@ -6,21 +6,16 @@ class ElevatorControlPanel extends React.Component {
         return (
             <div className="ElevatorControlPanel" >
                 Elevator Control Panel
-                <ElevatorButton
-                    id={this.props.buttons[2].id}
-                    isOn={this.props.buttons[2].isOn}
-                    label={this.props.buttons[2].label}
-                />
-                <ElevatorButton
-                    id={this.props.buttons[1].id}
-                    isOn={this.props.buttons[1].isOn}
-                    label={this.props.buttons[1].label}
-                />
-                <ElevatorButton
-                    id={this.props.buttons[0].id}
-                    isOn={this.props.buttons[0].isOn}
-                    label={this.props.buttons[0].label}
-                />
+                {this.props.buttons.map(el => {
+                    return (
+                        <ElevatorButton
+                            key={el.id}
+                            id={el.id}
+                            isOn={el.isOn}
+                            label={el.label}
+                        />
+                    )
+                })}
             </div >
         );
     }
